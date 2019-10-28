@@ -15,7 +15,7 @@ app.use(cors({credentials: true, origin: true}))
 app.get('/', function(req, res) {
     res.send('hello world');
 });
-const server = https.createServer(options, app).listen(3001, '0.0.0.0',function () {
+const server = https.createServer(options, app).listen(80,function () {
     var host = server.address().address;
     var port = server.address().port;
     console.log('http://%s:%s', host, port);
