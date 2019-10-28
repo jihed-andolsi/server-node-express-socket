@@ -4,13 +4,11 @@ const Config = require('./Config');
 const User = require('./User');
 const fs = require('fs');
 const https = require('https');
-const cors = require('cors')
 
 const options = {
     key: fs.readFileSync(__dirname + '/ssl/key.pem'),
     cert: fs.readFileSync(__dirname + '/ssl/csr.pem')
 };
-app.use(cors({credentials: true, origin: true}))
 
 app.get('/', function(req, res) {
     res.send('hello world');
